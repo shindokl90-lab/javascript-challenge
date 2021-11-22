@@ -7,12 +7,8 @@ var tbody = d3.select("tbody");
 // Select button
 var button = d3.select("#filter-btn");
 
-// Select the form
-var form = d3.select("form");
-
 // Button Click & Enter
 button.on("click", runEnter);
-form.on("submit",runEnter);
 d3.select("body").on("keypress", function(){
     if(d3.event.keyCode===32 || d3.event.keyCode ===13){
         runEnter();
@@ -39,8 +35,7 @@ function buildtable(tdata){
 // Complete the event handler function for the form
 function runEnter() {
 
-// Prevent the page from refreshing
-d3.event.preventDefault();
+// Prevent the page from refreshing d3.event.preventDefault();
 
 // Select the input element and get the raw HTML node
   var inputdate = d3.select("#datetime").property("value");
