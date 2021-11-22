@@ -11,11 +11,11 @@ var tbody = d3.select("tbody");
 // Select the filter button 
 
 var button = d3.select("#filter-btn");
-var form = d3.select("form");
+
 
 // Activate the filter button click mechanism 
 button.on("click", runEnter);
-form.on("submit", runEnter);
+
 d3.select("body").on("keypress", function(){
     if(d3.event.keycode===32 || d3.event.keyCode ===13){
         runEnter();
@@ -24,7 +24,7 @@ d3.select("body").on("keypress", function(){
 
 // Build the table 
 
-buildtable(table);
+buildtable(tableData);
 
 // Apply functionality to table 
 
